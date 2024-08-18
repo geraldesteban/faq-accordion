@@ -1,31 +1,5 @@
 import { useState } from "react";
 
-export default function App() {
-  return (
-    <div>
-      <FAQCard />
-    </div>
-  );
-}
-
-function FAQCard() {
-  return (
-    <div className="card">
-      <Title />
-      <Accordion />
-    </div>
-  );
-}
-
-function Title() {
-  return (
-    <div className="title">
-      <img src="./images/icon-star.svg" alt="star icon" />
-      <h2 className="title-name">FAQs</h2>
-    </div>
-  );
-}
-
 const questionAndAnswers = {
   questions: [
     "What is Frontend Mentor, and how will it help me?",
@@ -41,7 +15,7 @@ const questionAndAnswers = {
   ],
 };
 
-function Accordion() {
+export function Accordion() {
   const [openIndex, setOpenIndex] = useState(null);
 
   function handleToggle(index) {
@@ -57,7 +31,9 @@ function Accordion() {
       {questionAndAnswers.questions.map((q, index) => (
         <div key={index}>
           <div className="q-icon" onClick={() => handleToggle(index)}>
-            <p className="questions">{q}</p>
+            <p className="questions animate__animated animate__fadeInDown">
+              {q}
+            </p>
             <img
               src={
                 openIndex === index
@@ -65,11 +41,13 @@ function Accordion() {
                   : "../images/icon-plus.svg"
               }
               alt="icon"
-              className="icons"
+              className="icons animate__animated animate__jello"
             />
           </div>
           {openIndex === index && questionAndAnswers.answers[index] && (
-            <p className="answers">{questionAndAnswers.answers[index]}</p>
+            <p className="answers animate__animated animate__fadeInUp">
+              {questionAndAnswers.answers[index]}
+            </p>
           )}
           {index < questionAndAnswers.questions.length - 1 && <hr />}
         </div>
