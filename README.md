@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Frontend Mentor - FAQ accordion
 
-This project was bootstrapped with [Create React App](./public/images/desktop-preview.jpg).
+![Design preview for the FAQ accordion coding challenge](./public/images/desktop-preview.jpg)
