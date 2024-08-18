@@ -1,13 +1,91 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Work Sans", sans-serif;
+  background: hsl(275, 100%, 97%)
+    url(/public/images/background-pattern-desktop.svg) no-repeat center center
+    fixed;
+  background-position: top left;
+  background-size: 100% auto;
+}
+
+hr {
+  margin: 1.5rem 0rem;
+  opacity: 0.2;
+}
+
+.card {
+  background-color: #fff;
+  width: 36rem;
+  border-radius: 1rem;
+
+  display: block;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 18rem auto;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    background: hsl(275, 100%, 97%)
+      url(/public/images/background-pattern-mobile.svg) no-repeat center center
+      fixed;
+    background-position: top left;
+    background-size: 100% auto;
+  }
+  .card {
+    width: 80%;
+    margin: 10rem auto;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title-name {
+  color: hsl(292, 42%, 14%);
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+
+.q-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.questions {
+  color: hsl(292, 42%, 14%);
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.questions:hover {
+  color: hsl(281, 83%, 54%);
+}
+
+.answers {
+  color: hsl(292, 16%, 49%);
+  font-size: 1rem;
+  margin: 1.5rem 0rem;
+}
+
+.icons {
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
